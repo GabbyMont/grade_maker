@@ -35,12 +35,22 @@ class Grade_Maker_test < Minitest::Test
     end
 
 	def test_gradebook_list_68_77
-        list = {"Ron" => 68, "Finn" => 77}
-        assert_equal([{"Ron" => "70"}, {"Finn" => "80"}],grade_book(list))
+        list = {"Ron" => 68, "Jimmy" => 77}
+        assert_equal([{"Ron" => "70"}, {"Jimmy" => "80"}],grade_book(list))
     end
 
    	def test_gradebook_list_23_99
-        list = {"Ron" => 23, "Finn" => 99}
-        assert_equal([{"Ron" => "23"}, {"Finn" => "100"}],grade_book(list))
+        list = {"Ron" => 23, "Jimmy" => 99}
+        assert_equal([{"Ron" => "23"}, {"Jimmy" => "100"}],grade_book(list))
+    end
+
+    def test_gradebook_list_89_65
+        list = {"Ron" => 89, "Jimmy" => 65}
+        assert_equal([{"Ron" => "90"}, {"Jimmy" => "65"}],grade_book(list))
+    end
+
+    def test_gradebook_list_89_65
+        list = {"Ron" => 89, "Jimmy" => 65}
+        assert_equal([{"Ron" => "90"}, {"Jimmy" => "65"}],grade_book(list))
     end
 end
